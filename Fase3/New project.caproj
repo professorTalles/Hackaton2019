@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2rwfkhjww5e9e</unique-id>
+    <saved-with-version>26500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="R0J0hound" id="c2canvas" version="2">Canvas</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>960</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Sprite" sid="234429472835881">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="417204683410821" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Canvas.png">
+                        <image-point name="Imagepoint 1" x="0" y="0" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Papel" sid="796369118341326">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="231622640242055" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="487676959590714">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395671096055292" speed="5">
+                    <frame duration="1" hotspotX="0.502415" hotspotY="0.502415" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\PaletaX.png">
+                        <collision-poly>
+                            <point x="0.144928" y="0.144928" />
+                            <point x="0.497585" y="0" />
+                            <point x="0.855072" y="0.144928" />
+                            <point x="1" y="0.497585" />
+                            <point x="0.855072" y="0.855072" />
+                            <point x="0.497585" y="1" />
+                            <point x="0.149758" y="0.850242" />
+                            <point x="0" y="0.497585" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cursor" sid="392036313062829">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="774536474358447" speed="5">
+                    <frame duration="1" hotspotX="0.875" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ponto" sid="530111579044834">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="176330060123953" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ponto2" sid="747825415231437">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="955292489077306" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="471455981797649">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="985379406375259" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ContaGotas" sid="423884195418334">
+            <plugin id="c2canvas" />
+            <texture />
+        </object-type>
+        <object-type name="cor" sid="239512513466149">
+            <plugin id="c2canvas" />
+            <texture />
+        </object-type>
+        <object-type name="Linha" sid="739995853868518">
+            <plugin id="c2canvas" />
+            <texture />
+        </object-type>
+        <object-type name="Touch" sid="317236099239141">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Function" sid="906662593654939">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Browser" sid="601605531392256">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Mouse" sid="470666560944904">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Desenho" sid="349376840428610">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799392181590526" speed="5">
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.501493" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\pintar3.png">
+                        <collision-poly>
+                            <point x="0.129437" y="0.147365" />
+                            <point x="0.5" y="0.00154936" />
+                            <point x="0.860294" y="0.159268" />
+                            <point x="0.987808" y="0.499504" />
+                            <point x="0.847457" y="0.825853" />
+                            <point x="0.5" y="0.998451" />
+                            <point x="0.131148" y="0.850651" />
+                            <point x="0.0421448" y="0.499504" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.50137" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\pintar1.png">
+                        <collision-poly>
+                            <point x="0.127367" y="0.146971" />
+                            <point x="0.5" y="0.000993049" />
+                            <point x="0.862306" y="0.158888" />
+                            <point x="0.990534" y="0.499503" />
+                            <point x="0.849398" y="0.826216" />
+                            <point x="0.5" y="0.999007" />
+                            <point x="0.129088" y="0.851043" />
+                            <point x="0.0395869" y="0.499503" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.50137" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\pintar2.png">
+                        <collision-poly>
+                            <point x="0.122696" y="0.142421" />
+                            <point x="0.499737" y="0" />
+                            <point x="0.876777" y="0.143032" />
+                            <point x="0.999473" y="0.5" />
+                            <point x="0.877304" y="0.857579" />
+                            <point x="0.499737" y="1" />
+                            <point x="0.121116" y="0.859413" />
+                            <point x="0.000526593" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="671021236382217">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="287145985690772" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="363405253415235">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699036296120252" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="319649281766903">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="308885642343080" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont" sid="380752369710373">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground" sid="280042759683137">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\BtPintar.png" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Canvas" plugin-id="c2canvas" sid="239136987849103">
+            <members>
+                <member>ContaGotas</member>
+                <member>cor</member>
+                <member>Linha</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="9">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="10" />
+        <global-instance type="Browser" uid="11" />
+        <global-instance type="Mouse" uid="12" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

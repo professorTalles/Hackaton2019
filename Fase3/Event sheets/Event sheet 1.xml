@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Color" sid="900368623108498" static="0" type="text"></variable>
+        <event-group description="" sid="784311648029453" title="Sistema">
+            <sub-events>
+                <event-block sid="524397191714186">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="276131514304142" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="924501000857675" type="Linha" />
+                        <action id="-15" name="Set visible" sid="518076594311986" type="ponto2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="128915410572305" type="ponto">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="802418726316138">
+                    <conditions>
+                        <condition id="0" name="On function" sid="747641003484306" type="Function">
+                            <param id="0" name="Name">&quot;RGBparacor&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="455433997791699" type="Canvas">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="663853320459371" type="System">
+                            <param id="0" name="Variable">Color</param>
+                            <param id="1" name="Value">Browser.ExecJS(&quot;function h(c) {var hex = c.toString(16); return hex.length == 1 ? &apos;0&apos; + hex : hex;}&quot;&amp;&#x0D;&#x0A;&quot;function rgb(r, g, b) { return h(r) + h(g) + h(b); }&quot;&amp;&#x0D;&#x0A;&quot;rgb(&quot;&amp;Canvas.redAt(0,0)&amp;&quot;, &quot;&amp;Canvas.greenAt(0,0)&amp;&quot;, &quot;&amp;Canvas.blueAt(0,0)&amp;&quot;);&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="427111624302307">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="842466805020693" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="456991351285682" type="ContaGotas">
+                            <param id="0" name="Object">Cursor</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="702969648878228" type="Function">
+                            <param id="0" name="Name">&quot;RGBparacor&quot;</param>
+                            <param id="1" name="Parameter {n}">ContaGotas.UID</param>
+                        </action>
+                        <action id="8" name="Fill canvas with color" sid="838130356211784" type="cor">
+                            <param id="0" name="color">&quot;#&quot;&amp;Color</param>
+                        </action>
+                        <action id="4" name="Paste Object" sid="568891637454530" type="ContaGotas">
+                            <param id="0" name="object">cor</param>
+                        </action>
+                        <action id="4" name="Paste Object" sid="500126805254280" type="ContaGotas">
+                            <param id="0" name="object">Sprite2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="707989643255826" title="Touch">
+            <sub-events>
+                <event-block sid="604305086665902">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="496713893118184" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="201950444305693">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="205097312287703" type="Mouse">
+                                    <param id="0" name="Object">Sprite2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="107720331764907" type="Cursor">
+                                    <param id="0" name="X">Mouse.X</param>
+                                    <param id="1" name="Y">Mouse.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="808485027800680" title="Paint">
+            <sub-events>
+                <event-block sid="363316568122237">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="782796447451872" type="Mouse">
+                            <param id="0" name="Object">Papel</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="736208431243047">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="443303628792021" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="549488317062506" type="ponto2">
+                                    <param id="0" name="X">Mouse.X</param>
+                                    <param id="1" name="Y">Mouse.Y</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="111870125475680" type="System">
+                                    <param id="0" name="Object to create">Linha</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">ponto.X</param>
+                                    <param id="3" name="Y">ponto.Y</param>
+                                </action>
+                                <action id="8" name="Fill canvas with color" sid="254048094525314" type="Linha">
+                                    <param id="0" name="color">&quot;#&quot;&amp;Color</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="730998767882714" type="Linha">
+                                    <param id="0" name="X">ponto2.X</param>
+                                    <param id="1" name="Y">ponto2.Y</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="888118240736641" type="Linha">
+                                    <param id="0" name="Width">distance(ponto.X,ponto.Y,ponto2.X,ponto2.Y) + 1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="196599560284062" type="ponto">
+                                    <param id="0" name="Object">ponto2</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="103699540192037">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Mouse button is down" sid="438556012625772" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="376071179120200" type="ponto">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="148571368392718" title="Desenhos">
+            <sub-events>
+                <event-block sid="414970139151346">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="326805744539127" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="302737253674699" type="Desenho">
+                            <param id="0" name="Frame number">Desenho.AnimationFrame+1</param>
+                        </action>
+                        <action id="7" name="Clear Canvas" sid="475620194968366" type="Linha" />
+                    </actions>
+                </event-block>
+                <event-block sid="731490325971985">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="327080703335136" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="493229777315134" type="Desenho">
+                            <param id="0" name="Frame number">Desenho.AnimationFrame-1</param>
+                        </action>
+                        <action id="7" name="Clear Canvas" sid="556426912049079" type="Linha" />
+                    </actions>
+                </event-block>
+                <event-block sid="101592033136211">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="570561677417842" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Sprite3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Clear Canvas" sid="704253656269137" type="Linha" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
