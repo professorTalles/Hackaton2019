@@ -1,0 +1,1296 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Progamação Fase Corrida</name>
+    <events>
+        <variable constant="0" name="PontCopia" sid="387187061966063" static="0" type="number">0</variable>
+        <variable constant="0" name="Reniciei" sid="237820187620306" static="0" type="number">0</variable>
+        <variable constant="0" name="ponto" sid="402471102611258" static="0" type="number">0</variable>
+        <variable constant="0" name="mover" sid="966175483866861" static="0" type="number">0</variable>
+        <event-block sid="591266536255995">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="453802318674067" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="496314142354846" type="System">
+                    <param id="0" name="Group name">&quot;Fase 1&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="235159841204981" type="System">
+                    <param id="0" name="Group name">&quot;Fase 2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="832867119581678" type="System">
+                    <param id="0" name="Group name">&quot;Fase 3&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="653445277227737" type="System">
+                    <param id="0" name="Group name">&quot;Fase 4&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="482850597862679" type="System">
+                    <param id="0" name="Group name">&quot;Fase 5&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="660324282897632" type="System">
+                    <param id="0" name="Group name">&quot;Fase 6&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="192266100448051" type="System">
+                    <param id="0" name="Group name">&quot;Heroi da fome&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="239083208651502" type="System">
+                    <param id="0" name="Variable">PontCopia</param>
+                    <param id="1" name="Value">Text.Pont</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="398197177243934">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="325240274754360" type="Text">
+                    <param id="0" name="Instance variable">Pont</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="512189161953898" type="System">
+                    <param id="0" name="Group name">&quot;Fase 1&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="394544953996111">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="411207666433061" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="605056640737263" type="Text">
+                    <param id="0" name="Instance variable">Pont</param>
+                    <param id="1" name="Value">001</param>
+                </action>
+                <action id="0" name="Set text" sid="450998834389145" type="Text">
+                    <param id="0" name="Text">Text.Pont</param>
+                </action>
+                <action id="-10" name="Add to" sid="620447215709958" type="System">
+                    <param id="0" name="Variable">PontCopia</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="701367387123621">
+            <conditions>
+                <condition behavior="8Direction" id="1" name="Compare speed" sid="269728812873492" type="Personagem2">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="419102860001049" type="Bueiro" />
+                <action id="-3" name="Create object" sid="346582438625360" type="System">
+                    <param id="0" name="Object to create">Bueiro</param>
+                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                    <param id="2" name="X">Player1.X + 600</param>
+                    <param id="3" name="Y">random(736,960)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="758353289459643">
+            <conditions>
+                <condition behavior="8Direction" id="1" name="Compare speed" sid="932733898916861" type="Cat">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="613755784184366" type="Cat" />
+                <action id="-3" name="Create object" sid="492176104122399" type="System">
+                    <param id="0" name="Object to create">Cat</param>
+                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                    <param id="2" name="X">Player1.X + 600</param>
+                    <param id="3" name="Y">random(736,960)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="738407194145113">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="367281949275659" type="zonaMorta">
+                    <param id="0" name="Object">Cat</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="963391115103504" type="Cat" />
+            </actions>
+        </event-block>
+        <event-block sid="227136043387378">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="247850161619312" type="zonaMorta">
+                    <param id="0" name="Object">Bueiro</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="813591722862631" type="Bueiro" />
+            </actions>
+        </event-block>
+        <event-block sid="452830308504675">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="418588586911080" type="zonaMorta">
+                    <param id="0" name="Object">powerUp</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="975921926351123" type="powerUp" />
+            </actions>
+        </event-block>
+        <event-block sid="387919188462545">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="958364030440263" type="zonaMorta">
+                    <param id="0" name="Object">Passaro</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="721064708357790" type="Passaro" />
+            </actions>
+        </event-block>
+        <event-block sid="997688290412105">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="629659558626338" type="Bueiro">
+                    <param id="0" name="Object">Player1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="224286409789816" type="OutroPont">
+                    <param id="0" name="Instance variable">Pont</param>
+                    <param id="1" name="Value">Text.Pont</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="451593538033548" type="System">
+                    <param id="0" name="Layout">Restart</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="300597579531042">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="758745830195770" type="Cat">
+                    <param id="0" name="Object">Player1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="119927674753996" type="OutroPont">
+                    <param id="0" name="Instance variable">Pont</param>
+                    <param id="1" name="Value">Text.Pont</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="397484898262724" type="System">
+                    <param id="0" name="Layout">Restart</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="566491475068973">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="479975079597674" type="Passaro">
+                    <param id="0" name="Object">Player1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="843672462042474" type="System">
+                    <param id="0" name="Variable">PontCopia</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-11" name="Add to" sid="446959223672218" type="Text">
+                    <param id="0" name="Instance variable">Pont</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="679025665513957" type="Passaro" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="664079014516407" title="Fase 1">
+            <sub-events>
+                <event-block sid="261823823597774">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="936674145616855" type="System" />
+                        <condition id="-14" name="Compare variable" sid="674159123511603" type="System">
+                            <param id="0" name="Variable">mover</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="741449825104421" type="BG">
+                            <param id="0" name="X">BG.X -9</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="372965707411871">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="757382477881850" type="BG">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-640</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="266695792489052" type="BG">
+                            <param id="0" name="X">BG.X +1920&#x0D;&#x0A;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="820929114221338">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="285641225136083" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="999598969622761" type="System">
+                            <param id="0" name="Variable">mover</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="519097166472665">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Key is down" sid="910039746888771" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="161948555980496" type="System">
+                            <param id="0" name="Variable">mover</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="634150258402523">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="292529189850719" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="592417303022611" type="System">
+                            <param id="0" name="Object to create">Bueiro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(736,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="970704936477959">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="609700012657777" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="224158684528885" type="Bueiro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="931936787586347">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="843555723756252" type="System">
+                            <param id="0" name="Interval (seconds)">3.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="521034629740792" type="System">
+                            <param id="0" name="Object to create">Cat</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(736,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="222262684900717">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="496011426228415" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="988080671570906" type="Cat">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="877038843925278">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="616986843003891" type="System">
+                            <param id="0" name="Interval (seconds)">random(2,8)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="621253848974097" type="System">
+                            <param id="0" name="Object to create">Passaro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(10,440)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="515078519417315">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="891969200217893" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="133732469773092" type="Passaro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="912323059634629">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="712435465646483" type="Text">
+                            <param id="0" name="Instance variable">Pont</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="577186680808692" type="System">
+                            <param id="0" name="Group name">&quot;Fase 2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="671152733155568" type="System">
+                            <param id="0" name="Group name">&quot;Fase 1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="691812787570713" title="Fase 2">
+            <sub-events>
+                <event-block sid="120058125166462">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="842740671420522" type="System" />
+                        <condition id="-14" name="Compare variable" sid="129672692755084" type="System">
+                            <param id="0" name="Variable">mover</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="220982743295063" type="BG">
+                            <param id="0" name="X">BG.X -15</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="217977217228103">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="400817376978683" type="BG">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-854</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="372154825044383" type="BG">
+                            <param id="0" name="X">BG.X +1920</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="994588003886520">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="611477284831649" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="541455192810716" type="System">
+                            <param id="0" name="Variable">mover</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566125059780339">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Key is down" sid="219979017737127" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="952179316958529" type="System">
+                            <param id="0" name="Variable">mover</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="370599266652475">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="370706943250955" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="891442563249947" type="System">
+                            <param id="0" name="Object to create">Bueiro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(531,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="245856194582736">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="185674196373535" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="554192742289368" type="Bueiro">
+                            <param id="0" name="Max Speed">600</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="321863685415594" type="Bueiro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="423331959564345">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="588580896794809" type="System">
+                            <param id="0" name="Interval (seconds)">3.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="132700794189968" type="System">
+                            <param id="0" name="Object to create">Cat</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(531,853)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="977925146365944">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="674757097242255" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="151074282044376" type="Cat">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="137221842573654" type="Cat">
+                            <param id="0" name="Max Speed">600</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="440729608530131">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="741768525536310" type="System">
+                            <param id="0" name="Interval (seconds)">random(2,8)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="261020196761631" type="System">
+                            <param id="0" name="Object to create">Passaro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(10,440)</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="470052944070725" type="Passaro">
+                            <param id="0" name="Max Speed">900</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="469599097832882">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="517484575662101" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="590343862043286" type="Passaro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="775902815650676">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="520311553633980" type="Text">
+                            <param id="0" name="Instance variable">Pont</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="120068265193858" type="System">
+                            <param id="0" name="Group name">&quot;Fase 2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="386059663124868" type="System">
+                            <param id="0" name="Group name">&quot;Fase 3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="512989649142683" title="Fase 3">
+            <sub-events>
+                <event-block sid="970504006665345">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="264296639900855" type="System" />
+                        <condition id="-14" name="Compare variable" sid="648382417070422" type="System">
+                            <param id="0" name="Variable">mover</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="772523365568460" type="BG">
+                            <param id="0" name="X">BG.X -20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="305440479414274">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="277575219856853" type="BG">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-854</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="407763057294981" type="BG">
+                            <param id="0" name="X">BG.X +1920</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="995817999939203">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="690679217026314" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="561858596333631" type="System">
+                            <param id="0" name="Object to create">Bueiro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(531,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="923116268609784">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="424169062918637" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="530548472439868" type="Bueiro">
+                            <param id="0" name="Max Speed">750</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="136277128555632" type="Bueiro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="612175531634494">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="636788495272637" type="System">
+                            <param id="0" name="Interval (seconds)">3.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="423303792722474" type="System">
+                            <param id="0" name="Object to create">Cat</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(531,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="899098558815159">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="651565686588703" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="268587840894715" type="Cat">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="512602547302551" type="Cat">
+                            <param id="0" name="Max Speed">750</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="185490447268368">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="373636809935158" type="System">
+                            <param id="0" name="Interval (seconds)">random(2,8)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="285099216756711" type="System">
+                            <param id="0" name="Object to create">Passaro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(10,440)</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="223715646178987" type="Passaro">
+                            <param id="0" name="Max Speed">900</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="295981801643608">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="159349335650709" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="841586452248643" type="Passaro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="183795990205015">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="850280852591013" type="Text">
+                            <param id="0" name="Instance variable">Pont</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">45</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="237168943713871" type="System">
+                            <param id="0" name="Group name">&quot;Fase 3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="567134784192076" type="System">
+                            <param id="0" name="Group name">&quot;Fase 4&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="559266012215970" title="Fase 4">
+            <sub-events>
+                <event-block sid="539563982138813">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="184908950017598" type="System" />
+                        <condition id="-14" name="Compare variable" sid="489322482106387" type="System">
+                            <param id="0" name="Variable">mover</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="437502168037612" type="BG">
+                            <param id="0" name="X">BG.X -26</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="598939951477187">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="325918424887566" type="BG">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-854</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="552276814147639" type="BG">
+                            <param id="0" name="X">BG.X +1920</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="668265700574513">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="714315135078493" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="911971840101605" type="System">
+                            <param id="0" name="Object to create">Bueiro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(531,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="302404067039974">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="442009840176945" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="825293656919762" type="Bueiro">
+                            <param id="0" name="Max Speed">1000</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="807915605970180" type="Bueiro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="348449200183329">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="792390606006015" type="System">
+                            <param id="0" name="Interval (seconds)">3.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="689054992158667" type="System">
+                            <param id="0" name="Object to create">Cat</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(531,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="244799424604443">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="689304863481651" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="160303347667429" type="Cat">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="172410648892601" type="Cat">
+                            <param id="0" name="Max Speed">1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="489313913391741">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="865036081248352" type="System">
+                            <param id="0" name="Interval (seconds)">random(2,8)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="729283594498538" type="System">
+                            <param id="0" name="Object to create">Passaro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(10,440)</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="360290679088203" type="Passaro">
+                            <param id="0" name="Max Speed">1500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="368156377538238">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="471287861740401" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="461361424926047" type="Passaro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="681801300435317">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="816753070651019" type="Text">
+                            <param id="0" name="Instance variable">Pont</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="604095856268662" type="System">
+                            <param id="0" name="Group name">&quot;Fase 4&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="936959834287776" type="System">
+                            <param id="0" name="Group name">&quot;Fase 5&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="187134402704284" title="Fase 5">
+            <sub-events>
+                <event-block sid="490838050549732">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="328181924978217" type="System" />
+                        <condition id="-14" name="Compare variable" sid="430806418163798" type="System">
+                            <param id="0" name="Variable">mover</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="202691023211726" type="BG">
+                            <param id="0" name="X">BG.X -31</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393509513675729">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="753944810725671" type="BG">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-854</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="616155690926136" type="BG">
+                            <param id="0" name="X">BG.X +1920</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="175069872801726">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="702015523918928" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="110941490826161" type="System">
+                            <param id="0" name="Object to create">Bueiro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(531,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="468034621199042">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="322658765342735" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="216355295833538" type="Bueiro">
+                            <param id="0" name="Max Speed">1200</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="338898423685564" type="Bueiro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="240886988283465">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="848607349611578" type="System">
+                            <param id="0" name="Interval (seconds)">3.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="940428059057187" type="System">
+                            <param id="0" name="Object to create">Cat</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(531,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="289208979727295">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="443515685423304" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="322392926393121" type="Cat">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="114861167671091" type="Cat">
+                            <param id="0" name="Max Speed">1200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="523603914925807">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="290636974333383" type="System">
+                            <param id="0" name="Interval (seconds)">random(2,8)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="686541237227937" type="System">
+                            <param id="0" name="Object to create">Passaro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(10,440)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="508306084280566">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="197015926925601" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="785907872561511" type="Passaro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="616627975000932" type="Passaro">
+                            <param id="0" name="Max Speed">1500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="901401757648887">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="757859133505668" type="Text">
+                            <param id="0" name="Instance variable">Pont</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="638791272342033" type="System">
+                            <param id="0" name="Group name">&quot;Fase 5&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="984931657312075" type="System">
+                            <param id="0" name="Group name">&quot;Fase 6&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="375601486028189" title="Fase 6">
+            <sub-events>
+                <event-block sid="652440998397595">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="300286727493674" type="System" />
+                        <condition id="-14" name="Compare variable" sid="577208419412110" type="System">
+                            <param id="0" name="Variable">mover</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="418944985030829" type="BG">
+                            <param id="0" name="X">BG.X -38</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="201937873993694">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="278263245156338" type="BG">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-854</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="501902480372531" type="BG">
+                            <param id="0" name="X">BG.X +1920</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="789801686861767">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="862978879647158" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="566818522588738" type="System">
+                            <param id="0" name="Object to create">Bueiro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(531,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="903508690969847">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="285753107390000" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="354954646474084" type="Bueiro">
+                            <param id="0" name="Max Speed">1350</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="831644572497493" type="Bueiro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="269057757925556">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="427343882218926" type="System">
+                            <param id="0" name="Interval (seconds)">3.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="851079957213217" type="System">
+                            <param id="0" name="Object to create">Cat</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(531,960)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="415666019374682">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="194667645971130" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="980902386437315" type="Cat">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="215731673280807" type="Cat">
+                            <param id="0" name="Max Speed">1350</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="712384726730383">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="743841972360251" type="System">
+                            <param id="0" name="Interval (seconds)">random(2,8)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="162672594287207" type="System">
+                            <param id="0" name="Object to create">Passaro</param>
+                            <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                            <param id="2" name="X">Player1.X + 600</param>
+                            <param id="3" name="Y">random(10,440)</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="498332782739402" type="Passaro">
+                            <param id="0" name="Max Speed">1500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="113014518361268">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="204621561872323" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="155114143467199" type="Passaro">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="911284619054613">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="469745763705200" type="Text">
+                            <param id="0" name="Instance variable">Pont</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">120</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="954805501349991" type="System">
+                            <param id="0" name="Layout">&quot;Noite&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="619107842151951" title="Movimento 1" />
+        <event-block sid="255665614589334">
+            <conditions>
+                <condition id="2" name="Key is down" sid="761108061453976" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="991718563686185" type="Player1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="304887963842795" type="Player1">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="612987911338395">
+            <conditions>
+                <condition id="2" name="Key is down" sid="958734707492967" type="Keyboard">
+                    <param id="0" name="Key">83</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="711166532650295" type="Player1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="823135086260737" type="Player1">
+                    <param id="0" name="Control">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="103393369844217">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="772815393378795" type="Touch">
+                    <param id="0" name="Object">AreaSubirPraCima</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="491769013869356" type="Player1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="646977658231408" type="Player1">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="915959961882686">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="622562439781401" type="Touch">
+                    <param id="0" name="Object">Descerprabaixo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="834849851069186" type="Player1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="395543821158213" type="Player1">
+                    <param id="0" name="Control">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="242602586758352" title="Power ups" />
+        <event-block sid="110420666178120">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="176267138016196" type="Player1">
+                    <param id="0" name="Object">powerUp</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="817354432219438" type="Player1">
+                    <param id="0" name="Instance variable">PowerUp</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="419923334556938" type="powerUp" />
+            </actions>
+        </event-block>
+        <event-block sid="654508558926280">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="393431739945949" type="System">
+                    <param id="0" name="Interval (seconds)">random(2,5)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="633878113271315" type="System">
+                    <param id="0" name="Object to create">powerUp</param>
+                    <param id="1" name="Layer">&quot;Personagens&quot;</param>
+                    <param id="2" name="X">Player1.X + 600</param>
+                    <param id="3" name="Y">random(531,960)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="921172861615493">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="894804526767873" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="873343708158884" type="powerUp">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="552872887960246">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="757415008261005" type="powerUp">
+                    <param id="0" name="Object">ColodiBaixo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="203183901120835" type="powerUp">
+                    <param id="0" name="Instance variable">Movimento</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="200943807767481">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="152701189021163" type="powerUp">
+                    <param id="0" name="Object">ColodiBaixo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="376355079313389" type="powerUp">
+                    <param id="0" name="Instance variable">Movimento</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="834389504970130">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="838679570832916" type="powerUp">
+                    <param id="0" name="Object">QuandoColidPracima</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="855378781722096" type="powerUp">
+                    <param id="0" name="Instance variable">Movimento</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="153938015583446">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="153556116408934" type="powerUp">
+                    <param id="0" name="Instance variable">Movimento</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="705824389304289" type="powerUp">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="472658331380598">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="171975470635165" type="powerUp">
+                    <param id="0" name="Instance variable">Movimento</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="743350498504661" type="powerUp">
+                    <param id="0" name="Control">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="725275164759359">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="718750948130291" type="Player1">
+                    <param id="0" name="Instance variable">PowerUp</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="270554752242484" type="System">
+                    <param id="0" name="Group name">&quot;Heroi da fome&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="867222003479038" type="Player1">
+                    <param id="0" name="Animation">&quot;HeroiDaFome&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="766345003928728">
+            <conditions>
+                <condition id="4" name="On finished" sid="367711297906598" type="Player1">
+                    <param id="0" name="Animation">&quot;HeroiDaFome&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="726352851302265" type="System">
+                    <param id="0" name="Group name">&quot;Heroi da fome&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="482479800398803" type="AreaDeCenario">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="409553057923208" type="Player1">
+                    <param id="0" name="Instance variable">PowerUp</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Set Y" sid="257765838174788" type="Player1">
+                    <param id="0" name="Y">760</param>
+                </action>
+                <action id="4" name="Set animation" sid="416074837813678" type="Player1">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="927260081410566" type="Player1">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="844483928028476" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="11" name="Set collisions enabled" sid="776772491294126" type="Player1">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="219497402585698" title="Heroi da fome">
+            <sub-events>
+                <event-block sid="686388373446447">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="421741356137064" type="Player1">
+                            <param id="0" name="Animation">&quot;HeroiDaFome&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="828207750680582" type="AreaDeCenario">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

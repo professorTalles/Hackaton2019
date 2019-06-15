@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3b1dru66cacqu</unique-id>
+    <saved-with-version>26900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>960</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TiledBackground" sid="881167573804256">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\cf6a484cb1fcfb15a61594fc39333786.jpg" />
+        </object-type>
+        <object-type name="Player1" sid="454459174215115">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="PowerUp" sid="343932622346789" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="232995510225424">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="789975405177292">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="829875874934954" speed="5">
+                    <frame duration="0.3" hotspotX="0.502703" hotspotY="0.503226" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\piloto1 - Copia.png" />
+                    <frame duration="0.3" hotspotX="0.502703" hotspotY="0.503226" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\piloto2 - Copia.png" />
+                    <frame duration="0.3" hotspotX="0.502703" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\piloto3 - Copia.png" />
+                </animation>
+                <animation framecount="45" loop="0" name="HeroiDaFome" pingpong="0" repeatcount="0" repeatto="0" sid="508297191874693" speed="5">
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.507813" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Hero0.png">
+                        <collision-poly>
+                            <point x="0.00691792" y="0.193287" />
+                            <point x="0.82667" y="0.003125" />
+                            <point x="0.993082" y="0.972338" />
+                            <point x="0.0725491" y="0.785301" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.507813" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\hero2.png">
+                        <collision-poly>
+                            <point x="0.00856303" y="0.00943396" />
+                            <point x="0.822093" y="0" />
+                            <point x="0.994652" y="0.975309" />
+                            <point x="0.0546624" y="0.787096" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.507813">
+                        <collision-poly>
+                            <point x="0.00691792" y="0.193287" />
+                            <point x="0.82667" y="0.003125" />
+                            <point x="0.993082" y="0.972338" />
+                            <point x="0.0725491" y="0.785301" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0.5" hotspotX="0.501961" hotspotY="0.507813" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Hero0.png">
+                        <collision-poly>
+                            <point x="0.00534759" y="0.191358" />
+                            <point x="0.743315" y="0.00617284" />
+                            <point x="0.994652" y="0.975309" />
+                            <point x="0.294118" y="0.950618" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0.5" hotspotX="0.501961" hotspotY="0.507813" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\hero1.png">
+                        <collision-poly>
+                            <point x="0.00534759" y="0.191358" />
+                            <point x="0.743315" y="0.00617284" />
+                            <point x="0.994652" y="0.975309" />
+                            <point x="0.294118" y="0.950618" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0.5" hotspotX="0.501961" hotspotY="0.507813" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\hero2.png">
+                        <collision-poly>
+                            <point x="0.0273312" y="0.0534591" />
+                            <point x="0.590032" y="0.100629" />
+                            <point x="0.83119" y="0.0125786" />
+                            <point x="0.934084" y="0.5" />
+                            <point x="0.983923" y="0.968553" />
+                            <point x="0.5" y="0.685535" />
+                            <point x="0.0594855" y="0.792453" />
+                            <point x="0.051447" y="0.581761" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1 - Copia.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2 - Copia.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3 - Copia.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1 - Copia.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2 - Copia.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3 - Copia.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1 - Copia.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2 - Copia.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3 - Copia.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\HeroCerto1.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\Herocerto2.png" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\herocerto3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="580513452752379">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="BG" sid="149784526533516">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\bgrua.png" />
+        </object-type>
+        <object-type name="AreaDeLocomoçao" sid="683601690488903">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="539864824963969" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AreaDeCenario" sid="585234155891429">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="307815812794504">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="955860226628056" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="263103104238643">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="AreaSubirPraCima" sid="976474995325076">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525499777468541" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Descerprabaixo" sid="673870793797547">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="200754211604535" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Personagem1" sid="582198124502056">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="640497244591261">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710290102140605" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bueiro" sid="788204429258909">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="900379864807892">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="945943707079517" speed="5">
+                    <frame duration="1" hotspotX="0.499461" hotspotY="0.498891" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\bueiro1.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.499461" hotspotY="0.498891" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\bueiro2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="5" hotspotX="0.499461" hotspotY="0.498891" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\bueiro3.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Passaro" sid="728746883046009">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="826385258416651">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="701882163786726" speed="5">
+                    <frame duration="1" hotspotX="0.500986" hotspotY="0.500986" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\logo.png">
+                        <collision-poly>
+                            <point x="0.280992" y="0.303571" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.772727" y="0.245536" />
+                            <point x="0.72314" y="0.5" />
+                            <point x="0.979339" y="0.977679" />
+                            <point x="0.5" y="0.790179" />
+                            <point x="0.202479" y="0.78125" />
+                            <point x="0.42562" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Personagem2" sid="978103566465270">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="406920294467766">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="117289774241277">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="183155092084782" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="powerUp" sid="227450077681537">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Movimento" sid="272566255207457" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="598444341556199">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="399690866485784" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Nova pasta\coin.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.182371" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.182371" />
+                            <point x="1" y="0.49848" />
+                            <point x="0.818182" y="0.817629" />
+                            <point x="0.5" y="1" />
+                            <point x="0.181818" y="0.817629" />
+                            <point x="0.0030303" y="0.49848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="QuandoColidPrabaixo" sid="487760430413010">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="639069416279668" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="QuandoColidPracima" sid="881504679464371">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395647251560075" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ColodiBaixo" sid="318023123903768">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="501473477606575" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cat" sid="760829871917574">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="309299724936836">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="157628353072389" speed="5">
+                    <frame duration="1" hotspotX="0.495482" hotspotY="0.497011" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\cat1.png">
+                        <collision-poly>
+                            <point x="0.993976" y="0.400513" />
+                            <point x="0" y="0.400513" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.499576" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\cat2.png">
+                        <collision-poly>
+                            <point x="0.993976" y="0.400513" />
+                            <point x="0" y="0.400513" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.499316" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\cat3.png">
+                        <collision-poly>
+                            <point x="0.993976" y="0.400513" />
+                            <point x="0" y="0.400513" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="zonaMorta" sid="871283614843615">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628933818732548" speed="5">
+                    <frame duration="1" hotspotX="0.444" hotspotY="0.508" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="963859551150660">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="199940981099800" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="329033811190367">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Sprite2" sid="847857001230713">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="527690801990419" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Imagens Hackaton\restart.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="765817295844585">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Pont" sid="682821060214268" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Chão" sid="798915129657388">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524642247913504" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChãoQueAnda" sid="248566351264427">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Movimento" sid="898886978912575" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="385962064057479">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="537890546706663" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ColidirIrPraEsquerda" sid="578949017345153">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508811359524794" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ColidiIrPraDireita" sid="932294772236816">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="210562313319818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="129240433918517">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="OutroPont" sid="339896057397490">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Pont" sid="575826685217621" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Sprite3" sid="507493874503030">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="470078354966279" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50152" original-source="C:\Users\Edu7A\OneDrive\Área de Trabalho\Nova pasta\coin.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.182371" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.182371" />
+                            <point x="1" y="0.49848" />
+                            <point x="0.818182" y="0.817629" />
+                            <point x="0.5" y="1" />
+                            <point x="0.181818" y="0.817629" />
+                            <point x="0.0030303" y="0.49848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Fase Corrida.xml</layout>
+        <layout>Restart.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Progamação Fase Corrida.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Touch" uid="6">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Mouse" uid="16" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
